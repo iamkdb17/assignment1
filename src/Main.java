@@ -8,11 +8,11 @@ public class Main {
         {
             return a; // If statement true it will return function with value of given numbers
         }
-        if (a == 1  b == 1) // Second statement checking is any value are equal to 1
+        if (a == 1 || b == 1) // Second statement checking is any value are equal to 1
         {
             return 1; // If statement true it will return function with value 1
         }
-        if (a == 0  b == 0) // Third statement checking is any value are equal to 0
+        if (a == 0 || b == 0) // Third statement checking is any value are equal to 0
         {
             return 0; // If statement true it will return function with value 0
         }
@@ -33,4 +33,4 @@ public class Main {
         int b = number.nextInt(); // Creating and giving variable b user values
         System.out.println(FindGCD(a,b)); // Output the GCD of a and b by using function
     }
-} // Sayat was here
+}
