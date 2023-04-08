@@ -11,7 +11,7 @@ public class Main {
             return FindBinomialCoefficient(n-1, k-1) + FindBinomialCoefficient(n-1, k); // Returns the final solution by using the recursive function
         }
     }
- //no changes
+
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in); // Creating Scanner function to read user input
