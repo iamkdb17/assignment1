@@ -1,36 +1,22 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int FindGCD(int a, int b) // Creating function to find GCD of user values a and b
+    public static int FindBinomialCoefficient(int n, int k) // Creating the function to find binomial coefficent by using user values n and k
     {
-        int c; // Creating variable c without value
-        if (a == b) // First statement with condition a is equal b
+        if (k == 0 || n == k) // Creating statement to check if k is equal 0, or is n equal k
         {
-            return a; // If statement true it will return function with value of given numbers
+            return 1; // Returns 1 if statement is true
         }
-        if (a == 1 || b == 1) // Second statement checking is any value are equal to 1
-        {
-            return 1; // If statement true it will return function with value 1
+        else {
+            return FindBinomialCoefficient(n-1, k-1) + FindBinomialCoefficient(n-1, k); // Returns the final solution by using the recursive function
         }
-        if (a == 0 || b == 0) // Third statement checking is any value are equal to 0
-        {
-            return 0; // If statement true it will return function with value 0
-        }
-        c = Math.min(a, b); // Giving variable c the minimal value of the a or b
-        while(a % b != 0) // Creating the loop to find out the greatest common divisor
-        {
-            c = a % b;
-            a = b;
-            b = c;
-        }
-        return c; // Returns the GCD of a and b
-
     }
+
     public static void main(String[] args)
     {
-        Scanner number = new Scanner(System.in); // Creating Scanner function to read user input values
-        int a = number.nextInt(); // Creating and giving variable a user values
-        int b = number.nextInt(); // Creating and giving variable b user values
-        System.out.println(FindGCD(a,b)); // Output the GCD of a and b by using function
+        Scanner scanner = new Scanner(System.in); // Creating Scanner function to read user input
+        int n = scanner.nextInt(); // Creating and giving value to variable n
+        int k = scanner.nextInt(); // Creating and giving value to variable k
+        System.out.println(FindBinomialCoefficient(n,k)); // Output the final solution of function by using user values of n and k
     }
 }
